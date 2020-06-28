@@ -41,7 +41,8 @@ public class TableDisplayable : MonoBehaviour
 
     public void SetRowData (string[] rowDataTexts, int rowIndex) 
     {
-        for (int i = 0; i < rowDataTexts.Length; i++) {
+        for (int i = 0; i < rowDataTexts.Length; i++) 
+        {
             Text dataValueInstance = Instantiate (_dataDisplayablePrefab, _dataGroupTransform);
             dataValueInstance.TryGetComponent (out RectTransform headerInstanceRectTransform);
 
@@ -59,14 +60,16 @@ public class TableDisplayable : MonoBehaviour
         }
     }
 
-    public void ClearHeader () {
+    public void ClearHeader () 
+    {
         for (int i = 0; i < _headerGroupTransform.childCount; i++) 
         {
             Destroy (_headerGroupTransform.GetChild (i).gameObject);
         }
     }
 
-    public void EmptyRows () {
+    public void EmptyRows () 
+    {
         for (int i = 0; i < _dataGroupTransform.childCount; i++) 
         {
             Destroy (_dataGroupTransform.GetChild (i).gameObject);
